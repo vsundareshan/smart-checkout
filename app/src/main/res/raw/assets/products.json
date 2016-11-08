@@ -1,0 +1,28 @@
+[
+  {
+    "id": "1",
+    "name": "Tomato",
+    "description": "Roma Tomato",
+    "price": {
+      "amount": "1.25",
+      "currency": "USD",
+      "unitPrice": {
+        "type": "weight",
+        "unit": "pound"
+      }
+    }
+  },
+  {
+    "id": "2",
+    "name": "Cucumber",
+    "description": "Cucumber",
+    "price": {
+      "amount": "1.00",
+      "currency": "USD",
+      "unitPrice": {
+        "type": "quantity",
+        "unit": "1"
+      }
+    }
+  }
+]
