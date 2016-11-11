@@ -3,4 +3,110 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:id="@+id/ProductImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:src="@mipmap/ic_launcher"
+            android:icon="@android:drawable/ic_menu_save" />
+
+        <TextView
+            android:id="@+id/ProductName"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Name"
+            android:textSize="30sp"
+            android:layout_below="@+id/ProductImage"
+            android:layout_alignStart="@+id/ProductImage"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/ProductPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$$$$$"
+            android:textSize="30sp"
+            android:layout_below="@+id/ProductName"
+            android:layout_alignStart="@+id/ProductImage"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:id="@+id/ProductInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Information blahblhablah ablahfuiawghaoiwj eguwue"
+            android:textSize="20sp"
+            android:layout_below="@+id/ProductPrice"
+            android:layout_alignStart="@+id/ProductImage" />
+
+        <Button
+            android:id="@+id/ProductQtyUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/up_arrow"
+            android:textSize="28sp"
+            android:background="@android:color/transparent"
+            android:layout_below="@+id/ProductImage"
+            android:layout_alignEnd="@+id/ProductImage" />
+
+        <TextView
+            android:id="@+id/ProductQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_below="@id/ProductQtyUp"
+            android:gravity="center"
+            android:layout_toEndOf="@+id/ProductPrice"
+            android:layout_alignEnd="@+id/ProductImage"
+            android:layout_alignStart="@id/ProductQtyUp"/>
+
+        <Button
+            android:id="@+id/ProductQtyDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/down_arrow"
+            android:textStyle="bold"
+            android:background="@android:color/transparent"
+            android:layout_below="@id/ProductQty"
+            android:layout_alignEnd="@id/ProductImage" />
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_to_cart" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/scan" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/cart" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/account" />
+
+    </LinearLayout>
+
 </LinearLayout>

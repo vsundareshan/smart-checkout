@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">SelfCheckout</string>
+    <string name="scan">Scan</string>
+    <string name="cart">Cart</string>
+    <string name="account">Account</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="up_arrow">^</string>
+    <string name="down_arrow">v</string>
+
 </resources>
