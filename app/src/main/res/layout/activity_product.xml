@@ -3,6 +3,18 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Product"
+        android:id="@+id/textView"
+        android:gravity="center"
+        android:layout_weight="0.08"
+        android:textColor="@color/abc_background_cache_hint_selector_material_light"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:background="@color/colorPrimary" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
