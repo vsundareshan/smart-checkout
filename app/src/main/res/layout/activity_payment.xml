@@ -2,5 +2,135 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/ProductName1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Hair Dryer"
+            android:textSize="20sp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/ProductPrice1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$30"
+            android:textSize="20sp"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@+id/ProductName1">
+
+        <Button
+            android:id="@+id/ProductQtyUp1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/up_arrow"
+            android:textSize="28sp"
+            android:background="@android:color/transparent"
+            android:layout_alignParentEnd = "true" />
+
+
+        <TextView
+            android:id="@+id/ProductQty1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_below="@id/ProductQtyUp1"
+            android:gravity="center"
+            android:layout_toEndOf="@+id/ProductPrice1"
+            android:layout_alignParentEnd = "true"
+            android:layout_alignStart="@id/ProductQtyUp1"/>
+
+        <Button
+            android:id="@+id/ProductQtyDown1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/down_arrow"
+
+            android:textStyle="bold"
+            android:background="@android:color/transparent"
+            android:layout_below="@id/ProductQty1"
+            android:layout_alignParentEnd = "true" />
+
+        // second product
+
+        <TextView
+            android:id="@+id/ProductName2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Light bubbles"
+            android:textSize="20sp"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@+id/ProductQtyDown1" />
+
+        <TextView
+            android:id="@+id/ProductPrice2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$20"
+            android:textSize="20sp"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@+id/ProductName2"
+
+        <Button
+            android:id="@+id/ProductQtyUp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/up_arrow"
+            android:textSize="28sp"
+            android:layout_below="@+id/ProductQtyDown1"
+            android:background="@android:color/transparent"
+            android:layout_alignParentEnd = "true" />
+
+        <TextView
+            android:id="@+id/ProductQty2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_below="@id/ProductQtyUp2"
+            android:gravity="center"
+            android:layout_toEndOf="@+id/ProductPrice2"
+            android:layout_alignParentEnd = "true"
+            android:layout_alignStart="@id/ProductQtyUp2"/>
+
+        <Button
+            android:id="@+id/ProductQtyDown2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/down_arrow"
+
+            android:textStyle="bold"
+            android:background="@android:color/transparent"
+            android:layout_below="@id/ProductQty2"
+            android:layout_alignParentEnd = "true" />
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total: $50"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_alignParentBottom  = "true"
+            android:layout_centerHorizontal="true"
+            />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pay" />
+
 
 </LinearLayout>
