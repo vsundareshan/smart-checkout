@@ -1,28 +1,22 @@
 package selfcheckout.group08.cs465.selfcheckout;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.content.Intent;
-import android.util.Log;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.zxing.client.android.CaptureActivity;
+/**
+ * Created by vsundareshan on 11/17/16.
+ */
 
-public class Scanner extends AppCompatActivity implements OnClickListener{
-    private static final String TAG = Scanner.class.getSimpleName();
-
-
-    private TextView formatTxt, contentTxt;
+public class Account  extends AppCompatActivity implements View.OnClickListener {
+    private Button addToCartBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scanner);
-
+        setContentView(R.layout.activity_account);
         Button scanBtn = (Button)findViewById(R.id.scan_button);
         scanBtn.setOnClickListener(this);
         Button cartBtn = (Button)findViewById(R.id.cart_button);
@@ -42,17 +36,5 @@ public class Scanner extends AppCompatActivity implements OnClickListener{
             intent = new Intent(getApplicationContext(),Account.class);
         }
         startActivity(intent);
-    }
-    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-        //retrieve scan result
-        if (requestCode == 0) {
-            if (resultCode == RESULT_OK) {
-                String contents = intent.getStringExtra("SCAN_RESULT");
-                Log.d(TAG, "contents: " + contents);
-            } else if (resultCode == RESULT_CANCELED) {
-                // Handle cancel
-                Log.d(TAG, "RESULT_CANCELED");
-            }
-        }
     }
 }

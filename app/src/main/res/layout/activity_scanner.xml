@@ -33,12 +33,14 @@
             android:text="@string/scan" />
 
         <Button
+            android:id="@+id/cart_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/cart" />
 
         <Button
+            android:id="@+id/account_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"

@@ -19,15 +19,28 @@ public class Product extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product);
-        addToCartBtn = (Button)findViewById(R.id.add_to_cart);
-        addToCartBtn.setOnClickListener(this);
+        Button addCartBtn = (Button)findViewById(R.id.add_to_cart);
+        addCartBtn.setOnClickListener(this);
+        Button scanBtn = (Button)findViewById(R.id.scan_button);
+        scanBtn.setOnClickListener(this);
+        Button cartBtn = (Button)findViewById(R.id.cart_button);
+        cartBtn.setOnClickListener(this);
+        Button accountBtn = (Button)findViewById(R.id.account_button);
+        accountBtn.setOnClickListener(this);
     }
     public void onClick(View v){
+        Intent intent = null;
         //respond to clicks
-        if(v.getId()==R.id.add_to_cart){
-            //scan
-            Intent intent = new Intent(getApplicationContext(),ViewCart.class);
-            startActivityForResult(intent, 0);
+        if(v.getId()==R.id.scan_button){
+            //view product
+            intent = new Intent(getApplicationContext(),Product.class);
+        }else if(v.getId()==R.id.cart_button){
+            intent = new Intent(getApplicationContext(),ViewCart.class);
+        }else if(v.getId()==R.id.account_button){
+            intent = new Intent(getApplicationContext(),Account.class);
+        }else if(v.getId()==R.id.add_to_cart){
+            intent = new Intent(getApplicationContext(),ViewCart.class);
         }
+        startActivity(intent);
     }
 }

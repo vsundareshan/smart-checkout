@@ -1,5 +1,2 @@
 include ':app'
 include ':android'
-include ':android'
-include ':android'
-include ':android'
