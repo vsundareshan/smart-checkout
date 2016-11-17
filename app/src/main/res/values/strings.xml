@@ -7,5 +7,7 @@
     <string name="pay">Pay</string>
     <string name="up_arrow">^</string>
     <string name="down_arrow">v</string>
+    <string name="tap_to_scan">Place a barcode inside the viewfinder rectangle to scan it.</string>
+
 
 </resources>

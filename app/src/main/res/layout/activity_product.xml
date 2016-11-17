@@ -6,7 +6,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Product"
+        android:text="Self Checkout->Product"
         android:id="@+id/textView"
         android:gravity="center"
         android:layout_weight="0.08"
@@ -93,6 +93,7 @@
     </RelativeLayout>
 
     <Button
+        android:id="@+id/add_to_cart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/add_to_cart" />
