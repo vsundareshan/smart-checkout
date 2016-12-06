@@ -21,6 +21,7 @@ import com.google.zxing.integration.android.IntentResult;
 
 public class Scanner extends Activity implements OnClickListener{
     private static final String TAG = Scanner.class.getSimpleName();
+    public static final String PRODUCT_NAME = "PRODUCT_NAME";
 
     private Button scanBtn;
     @Override
@@ -42,7 +43,7 @@ public class Scanner extends Activity implements OnClickListener{
         Intent intent = null;
         //respond to clicks
         if(v.getId()==R.id.scan_button){
-            //view product
+            //open scanner
             IntentIntegrator scanIntegrator = new IntentIntegrator(this);
             scanIntegrator.initiateScan();
         }else if(v.getId()==R.id.cart_button){
@@ -51,6 +52,12 @@ public class Scanner extends Activity implements OnClickListener{
             intent = new Intent(getApplicationContext(),Account.class);
         }
         startActivity(intent);
+    }
+    @Override
+    public void startActivityForResult(Intent intent, int requestCode) {
+        try {
+            super.startActivityForResult(intent, requestCode);
+        } catch (Exception ignored){}
     }
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
 
@@ -62,10 +69,10 @@ public class Scanner extends Activity implements OnClickListener{
             Log.i(TAG,"Scan Format:"+scanFormat);
             Log.i(TAG,"Scan CONTENT:"+scanContent);
 
+            //TODO this is where a service call could be made to resolve product details from scan Content.
             intent = new Intent(getApplicationContext(),Product.class);
+            intent.putExtra(Scanner.PRODUCT_NAME,scanContent);
             startActivity(intent);
-            TextView contentTxt = (TextView)findViewById(R.id.ProductName);
-            contentTxt.setText("CONTENT: " + scanContent);
         }else{
             Toast toast = Toast.makeText(getApplicationContext(),
                     "No scan data received!", Toast.LENGTH_SHORT);
